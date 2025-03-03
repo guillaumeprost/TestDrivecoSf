@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Welcome to the Price computation</h1>
+    <div class="container py-5">
+        <h2 class="mt-5">Choose dates</h2>
+
+        <div class="row">
+            <div class="col-md-8">
+                {{ form(form) }}
+            </div>
+        </div>
+    </div>
+    <div class="container py-5">
+        <h2 class="mt-5">You will pay {{ result|default(0) }}€</h2>
+    </div>
+{% endblock %}
